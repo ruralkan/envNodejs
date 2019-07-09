@@ -17,6 +17,11 @@
     "precommit": "npm test",
     "pre-push": "npm test"
   },
+  "husky": {
+    "hooks": {
+      "precommit": "npm test",
+    "pre-push": "npm test"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ruralkan/envNodejs.git"
