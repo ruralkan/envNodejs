@@ -1,18 +1,21 @@
 {
   "name": "envnodejs",
   "version": "1.0.0",
-  "description": "Environment to develop js app",
+  "description": "My webpack project",
   "main": "app.js",
   "scripts": {
     "prestart": "babel-node utils/startMessage.js",
     "dev": "nodemon --exec npm run start",
-    "start": "npm-run-all --parallel open:src lint:watch",
+    "start": "webpack-dev-server",
     "open:src": "babel-node buildScripts/app.js",
     "lint": "esw buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel open:src localtunnel",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose",
+    "tdd": "jest --verbose --watch --onlyChanged",
+    "precommit": "npm test",
+    "pre-push": "npm test"
   },
   "repository": {
     "type": "git",
@@ -36,14 +39,21 @@
     "@babel/node": "^7.5.0",
     "@babel/preset-env": "^7.5.2",
     "@babel/register": "^7.4.4",
+    "@webpack-cli/init": "^0.2.2",
     "babel-loader": "^8.0.6",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.0.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-watch": "^5.1.2",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
     "localtunnel": "^1.9.2",
     "nodemon": "^1.19.1",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
     "chalk": "^2.4.2",

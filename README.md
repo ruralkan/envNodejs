@@ -1,3 +1,4 @@
+# 🚀 Welcome to your new awesome project!
 # envNodejs
 Nodemon is a simple little package that automatically restarts your server when files change.
 Use:  npm run dev
@@ -17,5 +18,7 @@ We choose Babel to compile newer javascript code to older one.
 
 ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to JSLint and JSHint with a few exceptions:
 
-At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.
+Husky can prevent bad git commit, git push and more 🐶 woof!
+
+Jest 🃏 Delightful JavaScript Testing
 
