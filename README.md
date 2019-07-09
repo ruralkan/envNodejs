@@ -30,3 +30,6 @@ Jest 🃏 Delightful JavaScript Testing
 Interesting guide to setup environment
 https://www.lvguowei.me/post/building-js-dev-env/
 
+Generate mockData
+https://www.freecodecamp.org/news/rapid-development-via-mock-apis-e559087be066/
+
