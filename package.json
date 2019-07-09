@@ -4,16 +4,16 @@
   "description": "My webpack project",
   "main": "app.js",
   "scripts": {
+    "test": "jest --verbose",
+    "tdd": "jest --verbose --watch --onlyChanged",
     "prestart": "babel-node utils/startMessage.js",
     "dev": "nodemon --exec npm run start",
-    "start": "webpack-dev-server",
+    "start": "npm-run-all --parallel  test open:src lint:watch",
     "open:src": "babel-node buildScripts/app.js",
     "lint": "esw buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "localtunnel": "lt --port 3000",
-    "share": "npm-run-all --parallel open:src localtunnel",
-    "test": "jest --verbose",
-    "tdd": "jest --verbose --watch --onlyChanged"
+    "share": "npm-run-all --parallel open:src localtunnel"
   },
   "husky": {
     "hooks": {

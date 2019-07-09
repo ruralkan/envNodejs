@@ -19,6 +19,14 @@ We choose Babel to compile newer javascript code to older one.
 ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to JSLint and JSHint with a few exceptions:
 
 Husky can prevent bad git commit, git push and more 🐶 woof!
+git diff package.json
++    "precommit": "rails test"
+$ git commit -am "Added precommit hook to run rails tests"
+  husky > npm run -s precommit (node v8.6.0)
 
 Jest 🃏 Delightful JavaScript Testing
+
+
+Interesting guide to setup environment
+https://www.lvguowei.me/post/building-js-dev-env/
 
