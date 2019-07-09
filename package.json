@@ -13,10 +13,13 @@
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel open:src localtunnel",
     "test": "jest --verbose",
-    "tdd": "jest --verbose --watch --onlyChanged",
-    "precommit": "npm test",
-    "pre-push": "npm test"
+    "tdd": "jest --verbose --watch --onlyChanged"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test",
+      "pre-push": "npm run lint && npm test"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ruralkan/envNodejs.git"
